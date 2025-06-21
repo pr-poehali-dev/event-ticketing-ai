@@ -6,7 +6,7 @@ import AIRecommendations from "@/components/AIRecommendations";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black">
       <Header />
       <main className="pb-20 md:pb-8">
         <HeroSection />

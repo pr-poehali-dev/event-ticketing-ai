@@ -44,13 +44,13 @@ const FeaturedEvents = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
             Популярные события
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Самые горячие билеты этого месяца. Не упусти шанс!
           </p>
         </div>
@@ -59,7 +59,7 @@ const FeaturedEvents = () => {
           {events.map((event) => (
             <Card
               key={event.id}
-              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group bg-gray-800 border-gray-700"
             >
               <div className="relative">
                 <img
@@ -68,7 +68,7 @@ const FeaturedEvents = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-gradient-to-r from-primary to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-medium">
                     {event.category}
                   </span>
                 </div>
@@ -76,35 +76,35 @@ const FeaturedEvents = () => {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="bg-white/80 hover:bg-white p-2"
+                    className="bg-black/50 hover:bg-black/70 p-2 text-white"
                   >
                     <Icon name="Heart" size={16} />
                   </Button>
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                <h3 className="text-xl font-bold mb-2 text-white">
                   {event.title}
                 </h3>
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-400">
                     <Icon name="Calendar" size={16} />
                     <span>{event.date}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-400">
                     <Icon name="Clock" size={16} />
                     <span>{event.time}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-400">
                     <Icon name="MapPin" size={16} />
                     <span>{event.location}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">
+                  <span className="text-2xl font-bold text-orange-500">
                     {event.price}
                   </span>
-                  <Button className="bg-gradient-to-r from-primary to-pink-500 hover:from-primary/90 hover:to-pink-500/90">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black">
                     Купить билет
                   </Button>
                 </div>
@@ -118,7 +118,7 @@ const FeaturedEvents = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-white"
+              className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black"
             >
               <Icon name="Plus" size={20} className="mr-2" />
               Посмотреть все события

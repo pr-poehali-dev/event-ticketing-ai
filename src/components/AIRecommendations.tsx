@@ -37,16 +37,16 @@ const AIRecommendations = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section className="py-16 bg-gradient-to-br from-black to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Icon name="Sparkles" size={32} className="text-primary" />
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+            <Icon name="Sparkles" size={32} className="text-orange-500" />
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
               ИИ рекомендует
             </h2>
           </div>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Наш алгоритм проанализировал ваши предпочтения и подобрал идеальные
             события
           </p>
@@ -56,7 +56,7 @@ const AIRecommendations = () => {
           {recommendations.map((rec) => (
             <Card
               key={rec.id}
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-primary/20"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-orange-500/20 bg-gray-800"
             >
               <div className="relative">
                 <img
@@ -65,26 +65,26 @@ const AIRecommendations = () => {
                   className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 right-4">
-                  <div className="bg-gradient-to-r from-primary to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                     {rec.confidence}% совпадение
                   </div>
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                <h3 className="text-xl font-bold mb-2 text-white">
                   {rec.title}
                 </h3>
                 <div className="flex items-center gap-2 mb-3">
-                  <Icon name="Brain" size={16} className="text-primary" />
-                  <p className="text-sm text-gray-600">{rec.reason}</p>
+                  <Icon name="Brain" size={16} className="text-orange-500" />
+                  <p className="text-sm text-gray-400">{rec.reason}</p>
                 </div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-600">{rec.date}</span>
-                  <span className="text-lg font-bold text-primary">
+                  <span className="text-sm text-gray-400">{rec.date}</span>
+                  <span className="text-lg font-bold text-orange-500">
                     {rec.price}
                   </span>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-primary to-pink-500 hover:from-primary/90 hover:to-pink-500/90">
+                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black">
                   <Icon name="Zap" size={16} className="mr-2" />
                   Заинтересован
                 </Button>
@@ -96,7 +96,7 @@ const AIRecommendations = () => {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-primary to-pink-500 hover:from-primary/90 hover:to-pink-500/90"
+            className="bg-orange-500 hover:bg-orange-600 text-black"
           >
             <Icon name="Settings" size={20} className="mr-2" />
             Настроить предпочтения
