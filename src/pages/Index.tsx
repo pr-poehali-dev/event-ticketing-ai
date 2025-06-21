@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import FeaturedEvents from "@/components/FeaturedEvents";
+import AIRecommendations from "@/components/AIRecommendations";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="pb-20 md:pb-8">
+        <HeroSection />
+        <FeaturedEvents />
+        <AIRecommendations />
+      </main>
+      <Navigation />
     </div>
   );
 };
